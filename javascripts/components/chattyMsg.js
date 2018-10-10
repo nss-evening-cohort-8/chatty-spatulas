@@ -31,6 +31,18 @@ const clearMsg = () => {
     setMessages(messagesArray);
 }
 
+const disableClearBtn = (e) => {
+    const clearedMsgArray = document.getElementById('message-output');
+    const clearBtn = document.getElementById('clear-btn');
+    if (e.target.id === 'clear-btn' && clearedMsgArray.innerHTML === ""){
+        clearBtn.setAttribute("disabled", "disabled");
+        clearBtn.classList.add("disabled");
+        console.log('disabled')
+    } 
+    else {
+        clearBtn.removeAttribute("disabled");
+        clearBtn.classList.remove("disabled");
+    }
+}
 
-
-export {setMessages, showMessages, messagesBuilder, clearMsg}
+export {setMessages, showMessages, messagesBuilder, clearMsg, disableClearBtn}

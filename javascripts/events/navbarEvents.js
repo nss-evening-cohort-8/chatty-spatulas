@@ -1,8 +1,11 @@
-import {clearMsg} from '../components/chattyMsg.js';
+import {clearMsg, disableClearBtn} from '../components/chattyMsg.js';
 
 const clearMsgEvent = () => {
     const clearBtn = document.getElementById('clear-btn');
-    clearBtn.addEventListener('click', clearMsg);
+    clearBtn.addEventListener('click', (e) => {
+        clearMsg();
+        disableClearBtn(e);
+    })
 }
 
 export {clearMsgEvent}
