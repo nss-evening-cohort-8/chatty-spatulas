@@ -24,4 +24,13 @@ const messagesBuilder = (messagesArray) => {
         printToDom(domString, "message-output");
 }
 
-export {setMessages, showMessages, messagesBuilder}
+const clearMsg = () => {
+    const clearedMsgArray = document.getElementById('message-output');
+    clearedMsgArray.innerHTML = "";
+    messagesArray = [];
+    setMessages(messagesArray);
+}
+
+
+
+export {setMessages, showMessages, messagesBuilder, clearMsg}
