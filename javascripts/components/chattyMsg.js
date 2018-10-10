@@ -1,3 +1,5 @@
+import {printToDom} from "../helpers/util.js";
+
 let messagesArray = []; 
 
 const setMessages = (newArray) => {
@@ -15,13 +17,11 @@ const messagesBuilder = (messagesArray) => {
             domString += `<div class="messageId">`;
             domString +=    `<h5>12:00:00<strong>${message.username}</strong></h5>`;        
             domString +=    `<p>${message.msg}</p>`;
-            domString +=    `<button> type="button" value="delete">`;
-            domString +=    `<button> type="button" value="delete">`;
+            domString +=    `<button type="button" class="btn btn-primary value="delete">Delete</button>`;
+            domString +=    `<button type="button" class="btn btn-primary value="delete">Delete</button>`;
             domString += `</div>`; 
-            
-        });
-        console.log(domString);
+            });
+        printToDom(domString, "message-output");
 }
-
 
 export {setMessages, showMessages, messagesBuilder}

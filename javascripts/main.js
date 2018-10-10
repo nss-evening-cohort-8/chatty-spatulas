@@ -1,7 +1,7 @@
-import {getMessages} from './data/startupData.js';
+import {getMessageData} from './data/startupData.js';
 
 const initializeApp = () => {
-    getMessages();
+    getMessageData();
 
   };
 

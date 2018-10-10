@@ -1,6 +1,5 @@
 import {setMessages, messagesBuilder, showMessages} from '../components/chattyMsg.js'
 
-
 function getData () {
     const data = JSON.parse(this.responseText);
     setMessages(data.messages);
@@ -13,10 +12,7 @@ function ifDataFails () {
 
 };
 
-
-
-
-const getMessages = () => {
+const getMessageData = () => {
     let myRequest = new XMLHttpRequest();
     myRequest.addEventListener('load', getData);
     myRequest.addEventListener('error', ifDataFails);
@@ -24,4 +20,4 @@ const getMessages = () => {
     myRequest.send();
 };
 
-export {getMessages};
+export {getMessageData};
