@@ -1,0 +1,29 @@
+{
+    "messages": [
+        {
+            "id": "1",
+            "username": "Marco",
+            "msg": "Hi guys"
+        },
+        {
+            "id": "2",
+            "username": "Mohammad",
+            "msg": "Sports are cool."
+        },
+        {
+            "id": "3",
+            "username": "Maggie",
+            "msg": "Coding is super fun!!"
+        },
+        {
+            "id": "4",
+            "username": "Lance",
+            "msg": "Nashville is an awesome place!"
+        },
+        {
+            "id": "5",
+            "username": "Marco",
+            "msg": "The predators are going to be amazing this year!"
+        }
+   ]
+}
