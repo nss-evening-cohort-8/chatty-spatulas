@@ -11,50 +11,42 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <link rel="stylesheet" href="main.css">
 </head>
-
 <body>
-    <div class="logoHolder text-center">
-        <img class="m-3" src="./img/logo.png" alt="Logo">
-    </div>
-
-
-    <nav class="bg-light w-75 mx-auto d-flex justify-content-center rounded shadow">
-        <div class="input-group w-50 mx-5 my-5">
+    <nav class="bg-light d-flex sticky justify-content-center rounded shadow hy-auto">
+        <div class="logoHolder text-center ">
+            <img class="m-3" src="./img/logo.png" alt="Logo">
+        </div>
+        <div class="input-group w-75 mx-5 my-5">
             <input type="text" placeholder="Enter your message" class="form-control" aria-label="Text input with dropdown button"
                 id="message-input">
-            <div class="input-group-append">
+            <div class="input-group-append h-auto">
                 <button class="btn btn-success dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true"
-                    aria-expanded="false"> Users <i class="fa fa-user"></i> </button>
-
+                    aria-expanded="false"> Users <i class="fa fa-user"></i></button>
                 <div class="dropdown-menu">
                     <a class="dropdown-item" href="#" id="MohUser"></a>
                     <a class="dropdown-item" href="#" id="MarUser"></a>
                     <a class="dropdown-item" href="#" id="LanUser"></a>
                     <a class="dropdown-item" href="#" id="MagUser"></a>
                 </div>
-
             </div>
         </div>
-
-        <button type="button" class="btn btn-outline-info my-5" id="themeButton">Select Theme <i class="fa fa-eyedropper"></i>
-        </button>
+        <button type="button" class="btn btn-outline-info my-5" id="theme-button">Select Theme<i class="fa fa-eyedropper"></i></button>
     </nav>
-
-    <div class="container">
+    <div class="container mt-5">
         <div class="row justify-content-between">
-            <div class="col">
-                <h3>Messages:</h3>
+            <div class="col p-0">
+                <h3 class="mb-0">Messages:</h3>
             </div>
-            <div class="col-md-auto">
-                <button type="button" class="btn btn-secondary" id="clear-btn">Clear Messages</button>
+            <div class="col-md-auto p-0">
+                <button type="button" class="btn btn-secondary mb-2" id="clear-btn">Clear Messages</button>
             </div>
         </div>
     </div>
-    <div class="message-container bg-light w-75 mx-auto my-5 p-5 rounded shadow" id="message-output"></div>
+    <div class="message-container bg-light w-75 mx-auto p-5 rounded shadow" id="message-output"></div>
 
-
+    <!-- footer -->
     <footer>
-        <p class="text-center text-secondary display-6"> The Spatulas Group</p>
+        <p class="text-center text-secondary display-6">The Spatulas Group</p>
     </footer>
 
     <!-- JavaScript -->
