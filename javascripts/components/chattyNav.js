@@ -1,1 +1,1 @@
-console.log('chattyNav');
+const users = ['Mohammad', 'Lance', 'Marco', 'Magie'];

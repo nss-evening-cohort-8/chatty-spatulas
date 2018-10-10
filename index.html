@@ -5,12 +5,41 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Chatty Chatty Bang Bang</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
         crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <link rel="stylesheet" href="main.css">
 </head>
 
 <body>
+    <div class="logoHolder text-center">
+        <img class="m-3" src="./img/logo.png" alt="Logo">
+    </div>
+
+
+    <nav class="bg-light w-75 mx-auto d-flex justify-content-center rounded shadow">
+        <div class="input-group w-50 mx-5 my-5">
+            <input type="text" placeholder="Enter your message" class="form-control" aria-label="Text input with dropdown button"
+                id="message-input">
+            <div class="input-group-append">
+                <button class="btn btn-success dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true"
+                    aria-expanded="false"> Users <i class="fa fa-user"></i> </button>
+
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" href="#" id="MohUser"></a>
+                    <a class="dropdown-item" href="#" id="MarUser"></a>
+                    <a class="dropdown-item" href="#" id="LanUser"></a>
+                    <a class="dropdown-item" href="#" id="MagUser"></a>
+                </div>
+
+            </div>
+        </div>
+
+        <button type="button" class="btn btn-outline-info my-5" id="themeButton">Select Theme <i class="fa fa-eyedropper"></i>
+        </button>
+    </nav>
+
     <div class="container">
         <div class="row justify-content-between">
             <div class="col">
@@ -21,7 +50,13 @@
             </div>
         </div>
     </div>
-    <div id="message-output"></div>
+    <div class="message-container bg-light w-75 mx-auto my-5 p-5 rounded shadow" id="message-output"></div>
+
+
+    <footer>
+        <p class="text-center text-secondary display-6"> The Spatulas Group</p>
+    </footer>
+
     <!-- JavaScript -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
         crossorigin="anonymous"></script>
