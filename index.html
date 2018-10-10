@@ -11,31 +11,39 @@
 
 <body>
 
-    <nav class="w-100">
-        <img class="m-3" src="./img/logo.png" alt="Logo">    
-        
-        <div class="input-group-lg w-50">
-            <legend>Enter your message:</legend>
-                <input type="text" class="form-control" aria-label="Text input with dropdown button">
+    <div class="logoHolder text-center">
+            <img class="m-3" src="./img/logo.png" alt="Logo">    
+    </div>
+
+    <nav class="bg-light w-75 mx-auto d-flex justify-content-center rounded shadow">        
+        <div class="input-group w-50 mx-5 my-5">
+            <input type="text" class="form-control" aria-label="Text input with dropdown button" id="message-input">
                 <div class="input-group-append">
-                  <button class="btn btn-outline-success dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Users </button>
+                  <button class="btn btn-success dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Users </button>
+                  
                   <div class="dropdown-menu">
-                    <a class="dropdown-item" href="#">Action</a>
-                    <a class="dropdown-item" href="#">Another action</a>
-                    <a class="dropdown-item" href="#">Something else here</a>
+                    <a class="dropdown-item" href="#" id="MohUser"></a>
+                    <a class="dropdown-item" href="#" id="MarUser"></a>
+                    <a class="dropdown-item" href="#" id="LanUser"></a>
+                    <a class="dropdown-item" href="#" id="MagUser"></a>
                   </div>
+
                 </div>
               </div>
 
-              <button type="button" class="btn btn-primary">Select Theme</button>
+              <button type="button" class="btn btn-primary my-5" id="themeButton">Select Theme</button>
 
 
     </nav>
 
 
+    <div class="message-container bg-light w-75 mx-auto my-5 p-5 rounded shadow" id="message-output"></div>
 
 
-    <div id="message-output"></div>
+    <footer>
+        <p class="text-center text-secondary display-6"> The Spatulas Group</p>
+    </footer>
+
     <!-- JavaScript -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
         crossorigin="anonymous"></script>

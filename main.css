@@ -1,4 +1,10 @@
-nav {
+body {
     background-color: #f1f2f6;
-    position: fixed;
 }
+
+nav {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+}
+
