@@ -4,8 +4,10 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Chatty Chatty Bang Bang</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
         crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <link rel="stylesheet" href="main.css">
 </head>
 
@@ -15,11 +17,12 @@
             <img class="m-3" src="./img/logo.png" alt="Logo">    
     </div>
 
+
     <nav class="bg-light w-75 mx-auto d-flex justify-content-center rounded shadow">        
         <div class="input-group w-50 mx-5 my-5">
-            <input type="text" class="form-control" aria-label="Text input with dropdown button" id="message-input">
+            <input type="text" placeholder="Enter your message" class="form-control" aria-label="Text input with dropdown button" id="message-input">
                 <div class="input-group-append">
-                  <button class="btn btn-success dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Users </button>
+                  <button class="btn btn-success dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Users <i class="fa fa-user"></i> </button>
                   
                   <div class="dropdown-menu">
                     <a class="dropdown-item" href="#" id="MohUser"></a>
@@ -31,7 +34,7 @@
                 </div>
               </div>
 
-              <button type="button" class="btn btn-primary my-5" id="themeButton">Select Theme</button>
+              <button type="button" class="btn btn-outline-info my-5" id="themeButton">Select Theme <i class="fa fa-eyedropper"></i> </button>
 
 
     </nav>
