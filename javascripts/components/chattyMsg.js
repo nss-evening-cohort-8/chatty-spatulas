@@ -17,8 +17,8 @@ const messagesBuilder = (messagesArray) => {
             domString += `<div class="messageId">`;
             domString +=    `<h5>12:00:00<strong>${message.username}</strong></h5>`;        
             domString +=    `<p>${message.msg}</p>`;
-            domString +=    `<button type="button" class="btn btn-primary value="delete">Delete</button>`;
-            domString +=    `<button type="button" class="btn btn-primary value="delete">Delete</button>`;
+            domString +=    `<button type="button" class="btn btn-primary" value="edit">Edit</button>`;
+            domString +=    `<button type="button" class="btn btn-primary" value="delete">Delete</button>`;
             domString += `</div>`; 
             });
         printToDom(domString, "message-output");
