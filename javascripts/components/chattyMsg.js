@@ -5,7 +5,7 @@ const setMessages = (newArray) => {
     console.log("bpop", messagesArray);
 };
 
-const getMessages = () => {
+const showMessages = () => {
     return messagesArray;
 };
 
@@ -20,8 +20,8 @@ const messagesBuilder = (messagesArray) => {
             domString += `</div>`; 
             
         });
-        printToDom(domString);
+        console.log(domString);
 }
 
 
-export {setMessages, getMessages, messagesBuilder}
+export {setMessages, showMessages, messagesBuilder}
