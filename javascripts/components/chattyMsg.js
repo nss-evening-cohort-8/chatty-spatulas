@@ -6,7 +6,6 @@ const setMessages = (newArray) => {
     messagesArray = newArray;
 };
 
-
 const showMessages = () => {
     return messagesArray;
 };
