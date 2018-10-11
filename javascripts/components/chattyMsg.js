@@ -1,10 +1,9 @@
-import {printToDom} from "../helpers/util.js";
+import { printToDom } from "../helpers/util.js";
 
-let messagesArray = []; 
+let messagesArray = [];
 
 const setMessages = (newArray) => {
     messagesArray = newArray;
-    console.log("bpop", messagesArray);
 };
 
 const showMessages = () => {
@@ -14,14 +13,15 @@ const showMessages = () => {
 const messagesBuilder = (messagesArray) => {
     let domString = '';
     messagesArray.forEach((message) => {
-            domString += `<div class="messageId">`;
-            domString +=    `<h5>12:00:00<strong>${message.username}</strong></h5>`;        
-            domString +=    `<p>${message.msg}</p>`;
-            domString +=    `<button type="button" class="btn btn-primary" value="edit">Edit</button>`;
-            domString +=    `<button type="button" class="btn btn-primary" value="delete">Delete</button>`;
-            domString += `</div>`; 
-            });
-        printToDom(domString, "message-output");
+        domString += `<div class="messageId">`;
+        domString += `<h5>${message.timeStamp}<strong>${message.username}</strong></h5>`;
+        domString += `<p>${message.msg}</p>`;
+        domString += `<button type="button" class="btn btn-primary" value="edit">Edit</button>`;
+        domString += `<button type="button" class="btn btn-primary" value="delete">Delete</button>`;
+        domString += `</div>`;
+    });
+    printToDom(domString, "message-output");
+
 }
 
 const clearMsg = () => {
@@ -34,15 +34,15 @@ const clearMsg = () => {
 const disableClearBtn = (e) => {
     const clearedMsgArray = document.getElementById('message-output');
     const clearBtn = document.getElementById('clear-btn');
-    if (e.target.id === 'clear-btn' && clearedMsgArray.innerHTML === ''){
+    if (e.target.id === 'clear-btn' && clearedMsgArray.innerHTML === '') {
         clearBtn.setAttribute('disabled', 'disabled');
         clearBtn.classList.add('disabled');
         console.log('disabled')
-    } 
+    }
     else {
         clearBtn.removeAttribute('disabled');
         clearBtn.classList.remove('disabled');
     }
 }
 
-export {setMessages, showMessages, messagesBuilder, clearMsg, disableClearBtn}
+export { setMessages, showMessages, messagesBuilder, clearMsg, disableClearBtn }
