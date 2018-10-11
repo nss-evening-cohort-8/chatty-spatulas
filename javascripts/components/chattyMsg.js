@@ -1,6 +1,10 @@
 import {printToDom} from "../helpers/util.js";
+// import {moment} from "../helpers/moment.js";
 
-let messagesArray = []; 
+let messagesArray = [];
+
+
+
 
 const setMessages = (newArray) => {
     messagesArray = newArray;
@@ -22,6 +26,7 @@ const messagesBuilder = (messagesArray) => {
             domString += `</div>`; 
             });
         printToDom(domString, "message-output");
+        
 }
 
 export {setMessages, showMessages, messagesBuilder}

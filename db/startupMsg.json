@@ -3,27 +3,32 @@
         {
             "id": "1",
             "username": "Marco",
-            "msg": "Hi guys"
+            "msg": "Hi guys",
+            "timeStamp": "h:mm a"
         },
         {
             "id": "2",
             "username": "Mohammad",
-            "msg": "Sports are cool."
+            "msg": "Sports are cool.",
+            "timeStamp": "h:mm a"
         },
         {
             "id": "3",
             "username": "Maggie",
-            "msg": "Coding is super fun!!"
+            "msg": "Coding is super fun!!",
+            "timeStamp": "h:mm a"
         },
         {
             "id": "4",
             "username": "Lance",
-            "msg": "Nashville is an awesome place!"
+            "msg": "Nashville is an awesome place!",
+            "timeStamp": "h:mm a"
         },
         {
             "id": "5",
             "username": "Marco",
-            "msg": "The predators are going to be amazing this year!"
+            "msg": "The predators are going to be amazing this year!",
+            "timeStamp": "h:mm a"
         }
    ]
 }
