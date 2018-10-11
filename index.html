@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -22,11 +23,24 @@
            </div>
         <button type="button" class="btn btn-outline-info my-auto" id="themeButton">Select Theme <i class="fa fa-eyedropper"></i> </button>
     </nav>
+    <div class="message-container w-75 mx-auto">
+        <div class="container mt-5">
+            <div class="row justify-content-between">
+                <div class="col p-0">
+                    <h3 class="mb-0">Messages:</h3>
+                </div>
+                <div class="col-md-auto p-0">
+                    <button type="button" class="btn btn-secondary mb-2" id="clear-btn">Clear Messages</button>
+                </div>
+            </div>
+        </div>
+        <div class="message-container bg-light mx-auto p-5 rounded shadow" id="message-output"></div>
+    </div>
 
-    <div class="message-container bg-light w-75 mx-auto my-5 p-5 rounded shadow" id="message-output"></div>
 
+    <!-- footer -->
     <footer>
-        <p class="text-center text-secondary display-6"> The Spatulas Group</p>
+        <p class="text-center text-secondary display-6">The Spatulas Group</p>
     </footer>
 
     <!-- JavaScript -->

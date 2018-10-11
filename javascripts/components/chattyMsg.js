@@ -24,4 +24,25 @@ const messagesBuilder = (messagesArray) => {
         printToDom(domString, "message-output");
 }
 
-export {setMessages, showMessages, messagesBuilder}
+const clearMsg = () => {
+    const clearedMsgArray = document.getElementById('message-output');
+    clearedMsgArray.innerHTML = '';
+    messagesArray = [];
+    setMessages(messagesArray);
+}
+
+const disableClearBtn = (e) => {
+    const clearedMsgArray = document.getElementById('message-output');
+    const clearBtn = document.getElementById('clear-btn');
+    if (e.target.id === 'clear-btn' && clearedMsgArray.innerHTML === ''){
+        clearBtn.setAttribute('disabled', 'disabled');
+        clearBtn.classList.add('disabled');
+        console.log('disabled')
+    } 
+    else {
+        clearBtn.removeAttribute('disabled');
+        clearBtn.classList.remove('disabled');
+    }
+}
+
+export {setMessages, showMessages, messagesBuilder, clearMsg, disableClearBtn}
