@@ -3,27 +3,32 @@
         {
             "id": "1",
             "username": "Marco",
-            "msg": "Hi guys"
+            "msg": "Hi guys",
+            "timeStamp": "12:00:00 am"
         },
         {
             "id": "2",
             "username": "Mohammad",
-            "msg": "Sports are cool. Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque sed pariatur praesentium itaque, numquam quisquam minus ducimus id fugit ullam natus, hic deleniti facilis perferendis, error doloribus laboriosam veniam quod."
+            "msg": "Sports are cool. Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque sed pariatur praesentium itaque, numquam quisquam minus ducimus id fugit ullam natus, hic deleniti facilis perferendis, error doloribus laboriosam veniam quod.",
+            "timeStamp": "12:00:00 am"
         },
         {
             "id": "3",
             "username": "Maggie",
-            "msg": "Coding is super fun!!"
+            "msg": "Coding is super fun!!",
+            "timeStamp": "12:00:00 am"
         },
         {
             "id": "4",
             "username": "Lance",
-            "msg": "Nashville is an awesome place!"
+            "msg": "Nashville is an awesome place!",
+            "timeStamp": "12:00:00 am"
         },
         {
             "id": "5",
             "username": "Marco",
-            "msg": "The predators are going to be amazing this year!"
+            "msg": "The predators are going to be amazing this year!",
+            "timeStamp": "12:00:00 am"
         }
-   ]
+    ]
 }
