@@ -1,5 +1,3 @@
-console.log('util');
-
 const printToDom = (stringToPrint, elementId) => {
   const selectedDiv = document.getElementById(elementId);
   selectedDiv.innerHTML = stringToPrint;
@@ -12,4 +10,8 @@ const getUniqueId = () => {
     .substr(2, 16);
 };
 
-export { printToDom, getUniqueId };
+const getTime = () => {
+  moment().format('h:mm:ss a');
+};
+
+export { printToDom, getTime, getUniqueId };
