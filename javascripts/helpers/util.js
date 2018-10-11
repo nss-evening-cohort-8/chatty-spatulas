@@ -1,8 +1,13 @@
-console.log('util');
-
 const printToDom = (stringToPrint, elementId) => {
     const selectedDiv = document.getElementById(elementId);
     selectedDiv.innerHTML = stringToPrint;
 };
 
-export {printToDom}
+const getTime = () => {
+    moment().format("h:mm:ss a")
+    
+};
+
+
+
+export {printToDom, getTime}
