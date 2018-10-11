@@ -11,26 +11,21 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <link rel="stylesheet" href="main.css">
 </head>
+
 <body>
-    <nav class="bg-light d-flex sticky justify-content-center rounded shadow hy-auto">
-        <div class="logoHolder text-center ">
-            <img class="m-3" src="./img/logo.png" alt="Logo">
-        </div>
-        <div class="input-group w-75 mx-5 my-5">
+    <nav class="bg-light w-100 mx-auto px-5 d-flex justify-content-center shadow sticky-top">
+        <img class="m-3" src="./img/logo.png" alt="Logo">
+        <div class="input-group mx-5 my-auto">
             <input type="text" placeholder="Enter your message" class="form-control" aria-label="Text input with dropdown button"
                 id="message-input">
-            <div class="input-group-append h-auto">
-                <button class="btn btn-success dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true"
-                    aria-expanded="false"> Users <i class="fa fa-user"></i></button>
-                <div class="dropdown-menu">
-                    <a class="dropdown-item" href="#" id="MohUser"></a>
-                    <a class="dropdown-item" href="#" id="MarUser"></a>
-                    <a class="dropdown-item" href="#" id="LanUser"></a>
-                    <a class="dropdown-item" href="#" id="MagUser"></a>
-                </div>
+            <div class="input-group-append">
+                <select class="btn btn-success dropdown-toggle" id="users">
+                    <!-- Populate users here from an array -->
+                </select>
             </div>
         </div>
-        <button type="button" class="btn btn-outline-info my-5" id="theme-button">Select Theme<i class="fa fa-eyedropper"></i></button>
+        <button type="button" class="btn btn-outline-info my-auto" id="themeButton">Select Theme <i class="fa fa-eyedropper"></i>
+        </button>
     </nav>
     <div class="container mt-5">
         <div class="row justify-content-between">
