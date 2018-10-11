@@ -4,31 +4,31 @@
             "id": "1",
             "username": "Marco",
             "msg": "Hi guys",
-            "timeStamp": "h:mm a"
+            "timeStamp": "5:30:23 am"
         },
         {
             "id": "2",
             "username": "Mohammad",
             "msg": "Sports are cool.",
-            "timeStamp": "h:mm a"
+            "timeStamp": "6:34:44 am"
         },
         {
             "id": "3",
             "username": "Maggie",
             "msg": "Coding is super fun!!",
-            "timeStamp": "h:mm a"
+            "timeStamp": "8:43:43 am"
         },
         {
             "id": "4",
             "username": "Lance",
             "msg": "Nashville is an awesome place!",
-            "timeStamp": "h:mm a"
+            "timeStamp": "9:43:34 am"
         },
         {
             "id": "5",
             "username": "Marco",
             "msg": "The predators are going to be amazing this year!",
-            "timeStamp": "h:mm a"
+            "timeStamp": "9:59:35 am"
         }
    ]
 }

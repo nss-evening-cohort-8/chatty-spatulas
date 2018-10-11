@@ -4505,4 +4505,3 @@
 
 })));
 
-export {moment}

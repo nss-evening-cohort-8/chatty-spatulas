@@ -1,15 +1,11 @@
 import {printToDom} from "../helpers/util.js";
-// import {moment} from "../helpers/moment.js";
 
 let messagesArray = [];
 
-
-
-
 const setMessages = (newArray) => {
     messagesArray = newArray;
-    console.log("bpop", messagesArray);
 };
+
 
 const showMessages = () => {
     return messagesArray;
