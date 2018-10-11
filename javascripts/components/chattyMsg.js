@@ -1,4 +1,4 @@
-import { printToDom, getUniqueId } from '../helpers/util.js';
+import { printToDom, getUniqueId, getTime } from '../helpers/util.js';
 
 let messagesArray = [];
 
@@ -13,14 +13,34 @@ const getMessages = () => {
 const messagesBuilder = (messagesArray) => {
   let domString = '';
   messagesArray.forEach((message) => {
-    domString += `<div class="messageId">`;
-    domString += `<h5>${message.timeStamp}<strong>${
-      message.username
-    }</strong></h5>`;
-    domString += `<p>${message.msg}</p>`;
-    domString += `<button type="button" class="btn btn-primary" value="edit">Edit</button>`;
-    domString += `<button type="button" class="btn btn-primary" value="delete">Delete</button>`;
+    domString += `<div class="w-75 mx-auto">`;
+    domString += `<div class="row">`;
+    domString += `<div class="col-sm-1">`;
+    domString += `<h6>[${message.timeStamp}]</h6>`;
     domString += `</div>`;
+    domString += `<div class="col-sm-1">`;
+    domString += `<h6><strong>${message.username}</strong></h6>`;
+    domString += `</div>`;
+    domString += `<div class="col-sm-8">`;
+    domString += `<p>${message.msg}</p>`;
+    domString += `</div>`;
+    domString += `<div class="col-sm-2 justify-content-around row align-items-center">`;
+    domString += `<button type="button" class="msg-btn btn btn-primary btn-sm" value="edit">Edit</button>`;
+    domString += `<button type="button" class="msg-btn btn btn-primary btn-sm" value="delete">Delete</button>`;
+    domString += `</div>`;
+    domString += `</div>`;
+    domString += `</div>`;
+    domString += `<hr>`;
+
+    // domString += `<div class="messageId my-2 col-9">`;
+    // domString += `<h6>${message.timeStamp}<strong>${message.username}</strong></h6>`;
+    // domString += `<p>${message.msg}</p>`;
+    // domString += `<div class="col-3">`;
+    // domString += `<button type="button" class="btn btn-primary btn-sm" value="edit">Edit</button>`;
+    // domString += `<button type="button" class="btn btn-primary btn-sm" value="delete">Delete</button>`;
+    // domString += `</div>`;
+    // domString += `</div>`;
+    // domString += `<hr>`;
   });
   printToDom(domString, 'message-output');
 };
@@ -46,16 +66,19 @@ const disableClearBtn = (e) => {
 };
 
 const enterKeyMsgEvent = (user, message) => {
-  console.log(getUniqueId());
-  console.log('User', user);
-  console.log('Message:', message);
+  let currentMsgArray = getMessages();
+  let newMsgObject = {};
+  newMsgObject.id = getUniqueId();
+  newMsgObject.username = user;
+  newMsgObject.msg = message;
+  newMsgObject.timeStamp = getTime();
+  // const newMsgId = getUniqueId();
+  // const newMsgTimeStamp = getTime();
+  // console.log('User', user);
+  // console.log('Message:', message);
+  console.log('New Message', newMsgObject);
+  currentMsgArray.push(newMsgObject);
+  messagesBuilder(currentMsgArray);
 };
 
-export {
-  setMessages,
-  getMessages,
-  messagesBuilder,
-  enterKeyMsgEvent,
-  clearMsg,
-  disableClearBtn
-};
+export { setMessages, getMessages, messagesBuilder, enterKeyMsgEvent, clearMsg, disableClearBtn };

@@ -11,7 +11,7 @@ const getUniqueId = () => {
 };
 
 const getTime = () => {
-  moment().format('h:mm:ss a');
+  return moment().format('h:mm:ss a');
 };
 
 export { printToDom, getTime, getUniqueId };
