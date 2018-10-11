@@ -1,4 +1,20 @@
 body {
-    background-color: #c8d6e5;
-    font-family: 'Roboto', sans-serif;
+  background-color: #c8d6e5;
+  font-family: 'Roboto', sans-serif;
+}
+
+.msg-btn {
+  width: 2rem;
+}
+
+.message-text {
+  font-size: 0.9rem;
+}
+
+.msg-row:nth-child(odd) {
+  /* background-color: darkgray; */
+}
+
+.msg-row:nth-child(even) {
+  /* background-color: cadetblue; */
 }

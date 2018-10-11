@@ -13,34 +13,26 @@ const getMessages = () => {
 const messagesBuilder = (messagesArray) => {
   let domString = '';
   messagesArray.forEach((message) => {
-    domString += `<div class="w-75 mx-auto">`;
-    domString += `<div class="row">`;
-    domString += `<div class="col-sm-1">`;
-    domString += `<h6>[${message.timeStamp}]</h6>`;
+    domString += `<div class="msg-row row m-1">`;
+    domString += `<div class="col-md-1">`;
+    domString += `<p class="message-text">${message.timeStamp}</p>`;
     domString += `</div>`;
-    domString += `<div class="col-sm-1">`;
-    domString += `<h6><strong>${message.username}</strong></h6>`;
+    domString += `<div class="col-md-2">`;
+    domString += `<p class="message-text"><strong>${message.username}</strong></p>`;
     domString += `</div>`;
-    domString += `<div class="col-sm-8">`;
+    domString += `<div class="col-md-8">`;
     domString += `<p>${message.msg}</p>`;
     domString += `</div>`;
-    domString += `<div class="col-sm-2 justify-content-around row align-items-center">`;
-    domString += `<button type="button" class="msg-btn btn btn-primary btn-sm" value="edit">Edit</button>`;
-    domString += `<button type="button" class="msg-btn btn btn-primary btn-sm" value="delete">Delete</button>`;
-    domString += `</div>`;
+    domString += `<div class="col-md-1 justify-content-end row align-items-center">`;
+    domString += `<button type="button" class="msg-btn btn btn-success btn-sm mx-1" value="${
+      message.id
+    }"><i class="far fa-edit"></i></button>`;
+    domString += `<button type="button" class="msg-btn btn btn-danger btn-sm mx-1" value="${
+      message.id
+    }"><i class="far fa-trash-alt"></i></button>`;
     domString += `</div>`;
     domString += `</div>`;
     domString += `<hr>`;
-
-    // domString += `<div class="messageId my-2 col-9">`;
-    // domString += `<h6>${message.timeStamp}<strong>${message.username}</strong></h6>`;
-    // domString += `<p>${message.msg}</p>`;
-    // domString += `<div class="col-3">`;
-    // domString += `<button type="button" class="btn btn-primary btn-sm" value="edit">Edit</button>`;
-    // domString += `<button type="button" class="btn btn-primary btn-sm" value="delete">Delete</button>`;
-    // domString += `</div>`;
-    // domString += `</div>`;
-    // domString += `<hr>`;
   });
   printToDom(domString, 'message-output');
 };
@@ -72,11 +64,7 @@ const enterKeyMsgEvent = (user, message) => {
   newMsgObject.username = user;
   newMsgObject.msg = message;
   newMsgObject.timeStamp = getTime();
-  // const newMsgId = getUniqueId();
-  // const newMsgTimeStamp = getTime();
-  // console.log('User', user);
-  // console.log('Message:', message);
-  console.log('New Message', newMsgObject);
+
   currentMsgArray.push(newMsgObject);
   messagesBuilder(currentMsgArray);
 };
