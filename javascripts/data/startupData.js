@@ -1,13 +1,13 @@
-import {setMessages, messagesBuilder, showMessages} from '../components/chattyMsg.js'
+import { setMessages, messagesBuilder, showMessages } from '../components/chattyMsg.js'
 
-function getData () {
+function getData() {
     const data = JSON.parse(this.responseText);
     setMessages(data.messages);
     messagesBuilder(showMessages());
-    
+
 };
 
-function ifDataFails () {
+function ifDataFails() {
     console.log('Xhr failed');
 
 };
@@ -20,4 +20,4 @@ const getMessageData = () => {
     myRequest.send();
 };
 
-export {getMessageData};
+export { getMessageData };

@@ -5,9 +5,9 @@ const printToDom = (stringToPrint, elementId) => {
 
 const getTime = () => {
     moment().format("h:mm:ss a")
-    
+
 };
 
 
 
-export {printToDom, getTime}
+export { printToDom, getTime }
