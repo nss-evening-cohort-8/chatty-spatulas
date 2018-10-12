@@ -1,11 +1,16 @@
 const editBtnEvent = () => {
-    const editButtons = document.getElementsByClassName('edit-btn');
+    const editButtons = document.getElementsByClassName('edit-btn')
     for (let i = 0; i < editButtons.length; i++) {
-        editButtons[i].addEventListener('click', (e) => {
-            // this id will change once we get marco's code
-            const messageId = e.target.
-        })
+        editButtons[i].addEventListener('click', editMessage);
     }
+}
+
+const editMessage = (e) => {
+    const msgInput = document.getElementById('message-input');
+    const userDropdown = document.getElementById('users');
+    msgInput.value = e.target.previousSibling.innerHTML;    
+    userDropdown.setAttribute("disabled", "disabled");
+    userDropdown.classList.add("disabled");
 }
 
 export {editBtnEvent}

@@ -5,7 +5,6 @@ const printToDom = (stringToPrint, elementId) => {
 
 const getTime = () => {
     moment().format("h:mm:ss a")
-
 };
 
 
