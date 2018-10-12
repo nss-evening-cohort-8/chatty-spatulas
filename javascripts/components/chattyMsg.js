@@ -57,8 +57,10 @@ const disableClearBtn = e => {
 };
 
 const enterKeyMsgEvent = (user, message) => {
-  if (message === "") {
-    inputValidation();
+  let userMsgError = message === "" ? true : false;
+  let selectedUserError = user === "Select User" ? true : false;
+  if (userMsgError === true || selectedUserError === true) {
+    inputValidation(userMsgError, selectedUserError);
     return;
   }
   let currentMsgArray = getMessages();
