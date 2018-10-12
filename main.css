@@ -3,6 +3,10 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
+.FirstItemHide:first-child {
+  display: none;
+}
+
 .msg-btn {
   width: 2rem;
 }
