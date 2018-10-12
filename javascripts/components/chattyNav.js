@@ -7,9 +7,7 @@ const userPopulate = () => {
   domString += `<select class="selectpicker btn-success">`;
   domString += `<option class="FirstItemHide">Select User</option>`;
   for (let i = 0; i < users.length; i++) {
-    domString += `<option class="bg-light text-dark my-4" id="${
-      users[i]
-    }-user">${users[i]}</option>`;
+    domString += `<option class="bg-light text-dark my-4" id="${users[i]}-user">${users[i]}</option>`;
   }
   domString += `</select>`;
   printToDom(domString, "users-select");
