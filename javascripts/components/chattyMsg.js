@@ -12,8 +12,11 @@ const getMessages = () => {
 
 const messagesBuilder = (messagesArray) => {
 	let domString = '';
+	if (messagesArray.length > 20) {
+		messagesArray.shift(messagesArray.length - 20, messagesArray.length);
+	}
 	messagesArray.forEach((message) => {
-		domString += `<div class="msg-row row m-1" id="${message.id}">`;
+		domString += `<div class="msg-row row m-1">`;
 		domString += `<div class="col-md-1">`;
 		domString += `<p class="message-text">${message.timeStamp}</p>`;
 		domString += `</div>`;
