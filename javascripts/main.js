@@ -1,11 +1,13 @@
 import { getMessageData } from "./data/startupData.js";
+import { navbarEnterEvents, clearMsgEvent, navBarUserSelectEvents } from "./events/navbarEvents.js";
 import { userPopulate } from "./components/chattyNav.js";
-import { clearMsgEvent } from "./events/navbarEvents.js";
 
 const initializeApp = () => {
   getMessageData();
   userPopulate();
+  navbarEnterEvents();
   clearMsgEvent();
+  navBarUserSelectEvents();
 };
 
 initializeApp();
