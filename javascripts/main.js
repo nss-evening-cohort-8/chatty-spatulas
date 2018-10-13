@@ -1,9 +1,10 @@
 import { getMessageData } from "./data/startupData.js";
-import { clearMsgEvent } from "./events/navbarEvents.js";
+import { clearMsgEvent, bigText } from "./events/navbarEvents.js";
 
 const initializeApp = () => {
   getMessageData();
   clearMsgEvent();
+  bigText();
 };
 
 initializeApp();
