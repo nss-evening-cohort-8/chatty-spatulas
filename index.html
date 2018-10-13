@@ -40,8 +40,8 @@
                     </button>
                 </div>
                 <div class="modal-body">`
-                    <div class="textSizeDropdown">
-                        <button class="btn btn-secondary dropdown-toggle" type="button" id="textSize" data-toggle="dropdown"
+                    <div class="textSizeDropdown" id="textSize">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" data-toggle="dropdown"
                             aria-haspopup="true" aria-expanded="false">
                             Text Size
                         </button>
@@ -51,41 +51,24 @@
                             <a class="dropdown-item" id="large-text-size" href="#">Large</a>
                         </div>
                     </div>
-                    <div class="colorScheme">
+                    <div id="themeColor">
                         <h5 id="backgroundColor">Background Color:</h5>
-                        <div class="backgroundColorDropdown">
-                            <button class="btn btn-secondary dropdown-toggle" type="button" id="textSize" data-toggle="dropdown"
-                                aria-haspopup="true" aria-expanded="false">
-                                Choose Color
-                            </button>
-                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                <h5>Background Color:</h5>
-                                <a class="dropdown-item" id="default-background" href="#">Default</a>
-                                <a class="dropdown-item" id="darkcyan-background" href="#">Dark Cyan</a>
-                                <a class="dropdown-item" id="chocolate-background" href="#">Chocolate</a>
-                            </div>
-                        </div>
-                        <h5 id="textColor">Text Color:</h5>
-                        <div class="textColorDropdown">
-                            <button class="btn btn-secondary dropdown-toggle" type="button" id="textSize" data-toggle="dropdown"
-                                aria-haspopup="true" aria-expanded="false">
-                                Choose Color
-                            </button>
-                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                <h5>Text Color:</h5>
-                                <a class="dropdown-item" id="default-textcolor" href="#">Default</a>
-                                <a class="dropdown-item" id="goldenrod-textcolor" href="#">Goldenrod</a>
-                                <a class="dropdown-item" id="blue-textcolor" href="#">Blue</a>
-                            </div>
-                        </div>
+                        <input type="color" id="backColor">
                     </div>
-                </div>
-
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-primary">Save changes</button>
+                    <div id="changeColor">
+                        <h5 id="textColor">Text Color:</h5>
+                        <input type="color" id="myColor">
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Save changes</button>
+                    </div>
                 </div>
             </div>
         </div>
+
+
+    </div>
     </div>
 
     <div class="message-container w-75 mx-auto">

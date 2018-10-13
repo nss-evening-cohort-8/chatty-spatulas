@@ -4,7 +4,7 @@ import {
   clearMsgEvent,
   navBarUserSelectEvents,
   textSize,
-  backgroundColor,
+  themeColor,
   textColor
 } from "./events/navbarEvents.js";
 import { userPopulate } from "./components/chattyNav.js";
@@ -16,7 +16,7 @@ const initializeApp = () => {
   clearMsgEvent();
   textSize();
   navBarUserSelectEvents();
-  backgroundColor();
+  themeColor();
   textColor();
 };
 

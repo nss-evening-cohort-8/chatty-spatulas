@@ -53,34 +53,19 @@ const textSize = () => {
   });
 };
 
-const backgroundColor = () => {
-  const defaultBackground = document.getElementById("default-background");
-  const darkcyanBackground = document.getElementById("darkcyan-background");
-  const chocolateBackground = document.getElementById("chocolate-background");
-  defaultBackground.addEventListener("click", e => {
-    document.getElementById("fullPage").style.backgroundColor = "#c8d6e5";
-  });
-  darkcyanBackground.addEventListener("click", e => {
-    document.getElementById("fullPage").style.backgroundColor = "darkcyan";
-  });
-  chocolateBackground.addEventListener("click", e => {
-    document.getElementById("fullPage").style.backgroundColor = "chocolate";
+const themeColor = () => {
+  const background = document.getElementById("backColor");
+  background.addEventListener("change", e => {
+    const newColor = document.getElementById("backColor").value;
+    document.body.style.backgroundColor = newColor;
   });
 };
 
 const textColor = () => {
-  const defaultTextColor = document.getElementById("default-textcolor");
-  const goldenrodTextColor = document.getElementById("goldenrod-textcolor");
-  const blueTextColor = document.getElementById("blue-textcolor");
-  defaultTextColor.addEventListener("click", e => {
-    document.getElementById("message-output").style.color = "black";
-  });
-  goldenrodTextColor.addEventListener("click", e => {
-    document.getElementById("message-output").style.color = "goldenrod";
-  });
-  blueTextColor.addEventListener("click", e => {
-    document.getElementById("message-output").style.color = "darkblue";
+  const msgColor = document.getElementById("myColor");
+  msgColor.addEventListener("change", e => {
+    const newColor = document.getElementById("myColor").value;
+    document.body.style.color = newColor;
   });
 };
-
-export { navbarEnterEvents, clearMsgEvent, navBarUserSelectEvents, textSize, backgroundColor, textColor };
+export { navbarEnterEvents, clearMsgEvent, navBarUserSelectEvents, textSize, themeColor, textColor };
