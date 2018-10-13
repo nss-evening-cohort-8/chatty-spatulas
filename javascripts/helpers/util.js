@@ -1,4 +1,4 @@
-import { getMessages } from '../components/chattyMsg.js';
+import { getMessages, editMode } from '../components/chattyMsg.js';
 
 const printToDom = (stringToPrint, elementId) => {
   const selectedDiv = document.getElementById(elementId);
@@ -33,6 +33,10 @@ const resetMessageInput = () => {
   msgInput.value = "";
 };
 
+const resetButtonInput = () => {
+    return navUserSelect[0]
+}
+
 // pass in an event and the id of the button as a string
 const disableBtn = (e, buttonId) => {
   const button = document.getElementById(buttonId);
@@ -55,4 +59,4 @@ const getMessageObject = (selectedMessage) => {
     return messageId;
 }
 
-export { printToDom, getTime, getUniqueId, inputValidation, resetMessageInput, enableBtn, disableBtn, getMessageObject };
+export { printToDom, getTime, getUniqueId, inputValidation, resetMessageInput, enableBtn, disableBtn, getMessageObject, resetButtonInput };
