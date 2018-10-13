@@ -1,5 +1,5 @@
 import { editBtnEvent } from "../events/userMsgEvents.js";
-import { printToDom, getUniqueId, getTime, inputValidation, resetMessageInput, getMessageObject, enableBtn, resetButtonInput  } from '../helpers/util.js';
+import { printToDom, getUniqueId, getTime, inputValidation, resetMessageInput, getMessageObject, disableDropdown, resetButtonInput, enableDropdown } from '../helpers/util.js';
 
 let messagesArray = [];
 
@@ -39,7 +39,8 @@ const messagesBuilder = (messagesArray) => {
 		domString += `</div>`;
 		domString += `<hr>`;
 	});
-	printToDom(domString, 'message-output');
+    printToDom(domString, 'message-output');
+    editBtnEvent();
 };
 
 const clearMsg = () => {
@@ -56,6 +57,8 @@ const enterKeyMsgEvent = (user, message) => {
       getUpdatedMsg(editMode.id, message);
       editMode.isInEdit = false;
       resetMessageInput();
+      resetButtonInput();
+      enableDropdown();
       return;
   }else if(userMsgError === true || selectedUserError === true) {
     inputValidation(userMsgError, selectedUserError);
@@ -70,6 +73,7 @@ const enterKeyMsgEvent = (user, message) => {
   currentMsgArray.push(newMsgObject);
   messagesBuilder(currentMsgArray);
   resetMessageInput();
+  resetButtonInput();
 };
 
 const getEdittedMsg = (e) => {
@@ -81,6 +85,7 @@ const getEdittedMsg = (e) => {
     editMode.id = msgIndex;
     msgInput.value = messagesArray[msgIndex].msg;
     userSelect.value = messagesArray[msgIndex].username;
+    disableDropdown();
   };
 
 const getUpdatedMsg = (msgIndex, edittedMsg) => {

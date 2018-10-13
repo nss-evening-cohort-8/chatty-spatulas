@@ -1,4 +1,4 @@
-import { getMessages, editMode } from '../components/chattyMsg.js';
+import { getMessages } from '../components/chattyMsg.js';
 
 const printToDom = (stringToPrint, elementId) => {
   const selectedDiv = document.getElementById(elementId);
@@ -34,7 +34,7 @@ const resetMessageInput = () => {
 };
 
 const resetButtonInput = () => {
-    return navUserSelect[0]
+  navUserSelect.selectedIndex = 0;
 }
 
 // pass in an event and the id of the button as a string
@@ -52,11 +52,18 @@ const enableBtn = (buttonId)=> {
   document.getElementById(buttonId).classList.remove("disabled");
 };
 
+const disableDropdown = () => {
+  navUserSelect.setAttribute("disabled", "disabled")
+}
+
+const enableDropdown = () => {
+  navUserSelect.removeAttribute("disabled");
+}
+
 const getMessageObject = (selectedMessage) => {
     const messagesArray = getMessages();
     const messageId = messagesArray.findIndex((messages) => messages.id === selectedMessage);
-    console.log(messageId)
     return messageId;
 }
 
-export { printToDom, getTime, getUniqueId, inputValidation, resetMessageInput, enableBtn, disableBtn, getMessageObject, resetButtonInput };
+export { printToDom, getTime, getUniqueId, inputValidation, resetMessageInput, enableBtn, disableBtn, getMessageObject, resetButtonInput, disableDropdown, enableDropdown };
