@@ -48,12 +48,13 @@ const clearMsg = () => {
 };
 
 const enterKeyMsgEvent = (user, message ) => {
+    const msgInput = document.getElementById('message-input');
   let userMsgError = message === "" ? true : false;
   let selectedUserError = user === "Select User" ? true : false;
   if (editMode.isInEdit === true) {
       getUpdatedMsg(editMode.id, message);
       editMode.isInEdit === false;
-
+      msgInput.value = "";
       return;
   }else if(userMsgError === true || selectedUserError === true) {
     inputValidation(userMsgError, selectedUserError);
