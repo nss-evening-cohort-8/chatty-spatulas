@@ -42,19 +42,15 @@ const clearMsgEvent = () => {
   });
 };
 
-const bigText = () => {
+const textSize = () => {
   const increaseBtn = document.getElementById("large-text");
+  const decreaseBtn = document.getElementById("regular-text");
   increaseBtn.addEventListener("click", e => {
     document.getElementById("message-output").style.fontSize = "2rem";
-    console.log("hello world");
   });
-};
-
-const regularText = () => {
-  const decreaseBtn = document.getElementById("regular-text");
   decreaseBtn.addEventListener("click", e => {
-    document.getElementById("message-output").style.fontsize = "1rem";
+    document.getElementById("message-output").style.fontSize = "1rem";
   });
 };
 
-export { navbarEnterEvents, clearMsgEvent, navBarUserSelectEvents, bigText, regularText };
+export { navbarEnterEvents, clearMsgEvent, navBarUserSelectEvents, textSize };
