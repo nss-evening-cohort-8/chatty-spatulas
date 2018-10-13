@@ -1,9 +1,4 @@
-<<<<<<< HEAD
-const users = ['Mohammad', 'Lance', 'Marco', 'Maggie'];
-const select = document.getElementById('users');
-=======
 import { printToDom } from "../helpers/util.js";
->>>>>>> master
 
 const users = ["Mohammad", "Lance", "Marco", "Maggie"];
 

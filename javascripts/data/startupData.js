@@ -11,13 +11,8 @@ function getData() {
 }
 
 function ifDataFails() {
-<<<<<<< HEAD
-    console.log('Xhr failed');
-};
-=======
   console.log('Xhr failed');
 }
->>>>>>> master
 
 const getMessageData = () => {
   let myRequest = new XMLHttpRequest();

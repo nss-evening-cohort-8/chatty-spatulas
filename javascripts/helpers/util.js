@@ -1,3 +1,5 @@
+import { getMessages } from '../components/chattyMsg.js';
+
 const printToDom = (stringToPrint, elementId) => {
   const selectedDiv = document.getElementById(elementId);
   selectedDiv.innerHTML = stringToPrint;
@@ -46,4 +48,11 @@ const enableBtn = (buttonId)=> {
   document.getElementById(buttonId).classList.remove("disabled");
 };
 
-export { printToDom, getTime, getUniqueId, inputValidation, resetMessageInput, enableBtn, disableBtn };
+const getMessageObject = (selectedMessage) => {
+    const messagesArray = getMessages();
+    const messageId = messagesArray.findIndex((messages) => messages.id === selectedMessage);
+    console.log(messageId)
+    return messageId;
+}
+
+export { printToDom, getTime, getUniqueId, inputValidation, resetMessageInput, enableBtn, disableBtn, getMessageObject };
