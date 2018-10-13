@@ -15,8 +15,22 @@ body {
   font-size: 0.9rem;
 }
 
-.textSizeDropdown {
-  display: flex;
-  margin: 5px;
-  padding: 5px;
+#textSize {
+  margin: 10px;
 }
+
+#backgroundColor {
+  display: flex;
+  padding: 15px;
+/* }
+
+#textColor {
+  display: flex;
+  padding: 15px;
+}
+
+.modal-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+} */
