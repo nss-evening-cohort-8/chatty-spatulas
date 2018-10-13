@@ -1,13 +1,9 @@
-import {
-  setMessages,
-  messagesBuilder,
-  showMessages
-} from "../components/chattyMsg.js";
+import { setMessages, messagesBuilder, getMessages } from "../components/chattyMsg.js";
 
 function getData() {
   const data = JSON.parse(this.responseText);
   setMessages(data.messages);
-  messagesBuilder(showMessages());
+  messagesBuilder(getMessages());
 }
 
 function ifDataFails() {
