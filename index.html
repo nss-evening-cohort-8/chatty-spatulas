@@ -32,13 +32,27 @@
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h2 class="modal-title">Change Theme</h2>
+                    <h1 class="modal-title"><b>Select Theme</b></h1>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
                 <div class="modal-body">
-                    <p>Modal body text goes here.</p>
+                    <h3>Customize Theme:</h3>
+                    <div class="textSizeDropdown">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" id="textSize" data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false">
+                            Text Size
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <h5>Text Size:</h5>
+                            <a class="dropdown-item" href="#">Regular Text</a>
+                            <a class="dropdown-item" href="#">Large Text</a>
+                        </div>
+                    </div>
+                    <h5>Background Color:</h5>
+
+                    <h5>Text Color:</h5>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -65,6 +79,7 @@
 
 
 
+
     <!-- footer -->
     <footer>
         <p class="text-center text-secondary display-6">The Spatulas Group</p>
@@ -77,6 +92,7 @@
         crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
         crossorigin="anonymous"></script>
+    <script src="./javascripts/helpers/jscolor.js"></script>
     <script src="./javascripts/helpers/util.js" type="module"></script>
     <script src="./javascripts/helpers/moment.js"></script>
     <script src="./javascripts/data/startupData.js" type="module"></script>
