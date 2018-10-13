@@ -43,19 +43,6 @@ const clearMsg = () => {
   setMessages(messagesArray);
 };
 
-const disableClearBtn = e => {
-  const clearedMsgArray = document.getElementById("message-output");
-  const clearBtn = document.getElementById("clear-btn");
-  if (e.target.id === "clear-btn" && clearedMsgArray.innerHTML === "") {
-    clearBtn.setAttribute("disabled", "disabled");
-    clearBtn.classList.add("disabled");
-    console.log("disabled");
-  } else {
-    clearBtn.removeAttribute("disabled");
-    clearBtn.classList.remove("disabled");
-  }
-};
-
 const enterKeyMsgEvent = (user, message) => {
   let userMsgError = message === "" ? true : false;
   let selectedUserError = user === "Select User" ? true : false;
@@ -74,4 +61,4 @@ const enterKeyMsgEvent = (user, message) => {
   resetMessageInput();
 };
 
-export { setMessages, getMessages, messagesBuilder, enterKeyMsgEvent, clearMsg, disableClearBtn };
+export { setMessages, getMessages, messagesBuilder, enterKeyMsgEvent, clearMsg };

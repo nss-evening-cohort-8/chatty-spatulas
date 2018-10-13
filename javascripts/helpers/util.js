@@ -31,4 +31,19 @@ const resetMessageInput = () => {
   msgInput.value = "";
 };
 
-export { printToDom, getTime, getUniqueId, inputValidation, resetMessageInput };
+// pass in an event and the id of the button as a string
+const disableBtn = (e, buttonId) => {
+  const button = document.getElementById(buttonId);
+  if (e.target.id === buttonId) {
+    button.setAttribute("disabled", "disabled");
+    button.classList.add("disabled");
+  }
+};
+
+// pass id of button as a string
+const enableBtn = (buttonId)=> {
+  document.getElementById(buttonId).removeAttribute("disabled");
+  document.getElementById(buttonId).classList.remove("disabled");
+};
+
+export { printToDom, getTime, getUniqueId, inputValidation, resetMessageInput, enableBtn, disableBtn };

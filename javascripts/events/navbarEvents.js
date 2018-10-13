@@ -1,10 +1,15 @@
-import { enterKeyMsgEvent, clearMsg, disableClearBtn } from "../components/chattyMsg.js";
+import { enterKeyMsgEvent, clearMsg } from "../components/chattyMsg.js";
+import { disableBtn, enableBtn } from '../helpers/util.js';
 
 const navbarEnterEvents = () => {
   const navTextInput = document.getElementById("message-input");
   const navUserSelect = document.getElementById("user-selected");
+  const clearBtn = document.getElementById("clear-btn");
   navTextInput.addEventListener("keyup", e => {
-    if (e.key === "Enter") {
+    if (e.key === "Enter" && clearBtn.classList.contains("disabled")) {
+      enterKeyMsgEvent(navUserSelect.value, navTextInput.value);
+      enableBtn("clear-btn");
+    } else if (e.key === "Enter") {
       enterKeyMsgEvent(navUserSelect.value, navTextInput.value);
     } else if (navTextInput.classList.contains("is-invalid")) {
       navTextInput.classList.remove("is-invalid");
@@ -33,7 +38,7 @@ const clearMsgEvent = () => {
   const clearBtn = document.getElementById("clear-btn");
   clearBtn.addEventListener("click", e => {
     clearMsg();
-    disableClearBtn(e);
+    disableBtn(e, 'clear-btn');
   });
 };
 
