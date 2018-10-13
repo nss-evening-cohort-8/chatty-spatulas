@@ -1,5 +1,12 @@
 import { getMessageData } from "./data/startupData.js";
-import { navbarEnterEvents, clearMsgEvent, navBarUserSelectEvents, textSize } from "./events/navbarEvents.js";
+import {
+  navbarEnterEvents,
+  clearMsgEvent,
+  navBarUserSelectEvents,
+  textSize,
+  backgroundColor,
+  textColor
+} from "./events/navbarEvents.js";
 import { userPopulate } from "./components/chattyNav.js";
 
 const initializeApp = () => {
@@ -9,6 +16,8 @@ const initializeApp = () => {
   clearMsgEvent();
   textSize();
   navBarUserSelectEvents();
+  backgroundColor();
+  textColor();
 };
 
 initializeApp();

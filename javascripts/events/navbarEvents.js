@@ -43,8 +43,8 @@ const clearMsgEvent = () => {
 };
 
 const textSize = () => {
-  const increaseBtn = document.getElementById("large-text");
-  const decreaseBtn = document.getElementById("regular-text");
+  const increaseBtn = document.getElementById("large-text-size");
+  const decreaseBtn = document.getElementById("default-text-size");
   increaseBtn.addEventListener("click", e => {
     document.getElementById("message-output").style.fontSize = "2rem";
   });
@@ -53,4 +53,34 @@ const textSize = () => {
   });
 };
 
-export { navbarEnterEvents, clearMsgEvent, navBarUserSelectEvents, textSize };
+const backgroundColor = () => {
+  const defaultBackground = document.getElementById("default-background");
+  const darkcyanBackground = document.getElementById("darkcyan-background");
+  const chocolateBackground = document.getElementById("chocolate-background");
+  defaultBackground.addEventListener("click", e => {
+    document.getElementById("fullPage").style.backgroundColor = "#c8d6e5";
+  });
+  darkcyanBackground.addEventListener("click", e => {
+    document.getElementById("fullPage").style.backgroundColor = "darkcyan";
+  });
+  chocolateBackground.addEventListener("click", e => {
+    document.getElementById("fullPage").style.backgroundColor = "chocolate";
+  });
+};
+
+const textColor = () => {
+  const defaultTextColor = document.getElementById("default-textcolor");
+  const goldenrodTextColor = document.getElementById("goldenrod-textcolor");
+  const blueTextColor = document.getElementById("blue-textcolor");
+  defaultTextColor.addEventListener("click", e => {
+    document.getElementById("message-output").style.color = "black";
+  });
+  goldenrodTextColor.addEventListener("click", e => {
+    document.getElementById("message-output").style.color = "goldenrod";
+  });
+  blueTextColor.addEventListener("click", e => {
+    document.getElementById("message-output").style.color = "darkblue";
+  });
+};
+
+export { navbarEnterEvents, clearMsgEvent, navBarUserSelectEvents, textSize, backgroundColor, textColor };

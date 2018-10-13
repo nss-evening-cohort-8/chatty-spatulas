@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="main.css">
 </head>
 
-<body>
+<body id="fullPage">
     <nav class="navbar navbar-expand-sm bg-light w-100 shadow sticky-top">
         <img class="m-3 nav-item mx-auto" src="./img/logo.png" alt="Logo">
         <div class="input-group mx-5 my-auto nav-item">
@@ -26,9 +26,9 @@
             </div>
         </div>
         <button type="button" class="theme-buton btn btn-outline-info mx-auto m-3 nav-item" id="themeButton"
-            data-toggle="modal" data-target="#themeModal">Select
-            Theme<i class="fa fa-eyedropper"></i></button>
+            data-toggle="modal" data-target="#themeModal">Select Theme <i class="fas fa-eye-dropper"></i></button>
     </nav>
+
 
     <div id="themeModal" class="modal" tabindex="-1" role="dialog">
         <div class="modal-dialog" role="document">
@@ -47,25 +47,46 @@
                         </button>
                         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                             <h5>Text Size:</h5>
-                            <a class="dropdown-item" id="regular-text" href="#">Regular Text</a>
-                            <a class="dropdown-item" id="large-text" href="#">Large Text</a>
+                            <a class="dropdown-item" id="default-text-size" href="#">Default</a>
+                            <a class="dropdown-item" id="large-text-size" href="#">Large</a>
                         </div>
                     </div>
                     <div class="colorScheme">
                         <h5 id="backgroundColor">Background Color:</h5>
-
+                        <div class="backgroundColorDropdown">
+                            <button class="btn btn-secondary dropdown-toggle" type="button" id="textSize" data-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="false">
+                                Choose Color
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                <h5>Background Color:</h5>
+                                <a class="dropdown-item" id="default-background" href="#">Default</a>
+                                <a class="dropdown-item" id="darkcyan-background" href="#">Dark Cyan</a>
+                                <a class="dropdown-item" id="chocolate-background" href="#">Chocolate</a>
+                            </div>
+                        </div>
                         <h5 id="textColor">Text Color:</h5>
+                        <div class="textColorDropdown">
+                            <button class="btn btn-secondary dropdown-toggle" type="button" id="textSize" data-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="false">
+                                Choose Color
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                <h5>Text Color:</h5>
+                                <a class="dropdown-item" id="default-textcolor" href="#">Default</a>
+                                <a class="dropdown-item" id="goldenrod-textcolor" href="#">Goldenrod</a>
+                                <a class="dropdown-item" id="blue-textcolor" href="#">Blue</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                     <button type="button" class="btn btn-primary">Save changes</button>
                 </div>
             </div>
         </div>
     </div>
-
 
     <div class="message-container w-75 mx-auto">
         <div class="container mt-5">
@@ -81,9 +102,6 @@
     </div>
     <div class="w-75 mx-auto bg-light rounded shadow pt-2" id="message-output"></div>
 
-
-
-
     <!-- footer -->
     <footer>
         <p class="text-center text-secondary display-6">The Spatulas Group</p>
@@ -96,7 +114,6 @@
         crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
         crossorigin="anonymous"></script>
-    <script src="./javascripts/helpers/jscolor.js"></script>
     <script src="./javascripts/helpers/util.js" type="module"></script>
     <script src="./javascripts/helpers/moment.js"></script>
     <script src="./javascripts/data/startupData.js" type="module"></script>
