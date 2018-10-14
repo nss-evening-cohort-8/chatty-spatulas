@@ -13,6 +13,7 @@ const navbarEnterEvents = () => {
       enterKeyMsgEvent(navUserSelect.value, navTextInput.value);
     } else if (navTextInput.classList.contains("is-invalid")) {
       navTextInput.classList.remove("is-invalid");
+      navTextInput.setAttribute("placeholder", "Enter your message");
     }
   });
 };

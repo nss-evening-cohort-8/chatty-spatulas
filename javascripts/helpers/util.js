@@ -1,3 +1,5 @@
+import { getMessages } from "../components/chattyMsg.js";
+
 const printToDom = (stringToPrint, elementId) => {
   const selectedDiv = document.getElementById(elementId);
   selectedDiv.innerHTML = stringToPrint;
@@ -8,9 +10,7 @@ const navUserSelect = document.getElementById("user-selected");
 
 // Generate unique ID for our messages
 const getUniqueId = () => {
-  return Math.random()
-    .toString(36)
-    .substr(2, 16);
+  return Math.random().toString(36).substr(2, 16);
 };
 
 const getTime = () => {
@@ -31,6 +31,10 @@ const resetMessageInput = () => {
   msgInput.value = "";
 };
 
+const resetButtonInput = () => {
+  navUserSelect.selectedIndex = 0;
+};
+
 // pass in an event and the id of the button as a string
 const disableBtn = (e, buttonId) => {
   const button = document.getElementById(buttonId);
@@ -46,4 +50,26 @@ const enableBtn = buttonId => {
   document.getElementById(buttonId).classList.remove("disabled");
 };
 
+<<<<<<< HEAD
 export { printToDom, getTime, getUniqueId, inputValidation, resetMessageInput, enableBtn, disableBtn };
+=======
+const disableDropdown = () => {
+  navUserSelect.setAttribute("disabled", "disabled");
+};
+
+const enableDropdown = () => {
+  navUserSelect.removeAttribute("disabled");
+};
+
+const getMessageObject = selectedMessage => {
+  const messagesArray = getMessages();
+  const messageId = messagesArray.findIndex(messages => messages.id === selectedMessage);
+  return messageId;
+};
+
+const setScrolDown = divId => {
+  document.getElementById(divId).scrollIntoView();
+};
+
+export { printToDom, getTime, getUniqueId, inputValidation, resetMessageInput, enableBtn, disableBtn, setScrolDown, getMessageObject, resetButtonInput, disableDropdown, enableDropdown };
+>>>>>>> master

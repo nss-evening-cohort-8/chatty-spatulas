@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 import { setMessages, messagesBuilder, getMessages } from "../components/chattyMsg.js";
+=======
+import { setMessages, messagesBuilder, getMessages } from '../components/chattyMsg.js';
+>>>>>>> master
 
 function getData() {
   const data = JSON.parse(this.responseText);

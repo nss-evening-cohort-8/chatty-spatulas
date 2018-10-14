@@ -38,3 +38,8 @@ body {
   padding: 15px;
   justify-content: space-between;
 }
+
+.message-board {
+	max-height: 60vh;
+	overflow-y: auto;
+}
