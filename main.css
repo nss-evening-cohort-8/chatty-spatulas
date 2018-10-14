@@ -14,3 +14,8 @@ body {
 .message-text {
 	font-size: 0.9rem;
 }
+
+.message-board {
+	max-height: 60vh;
+	overflow-y: auto;
+}

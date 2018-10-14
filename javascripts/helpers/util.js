@@ -1,4 +1,4 @@
-import { getMessages } from '../components/chattyMsg.js';
+import { getMessages } from "../components/chattyMsg.js";
 
 const printToDom = (stringToPrint, elementId) => {
   const selectedDiv = document.getElementById(elementId);
@@ -10,9 +10,7 @@ const navUserSelect = document.getElementById("user-selected");
 
 // Generate unique ID for our messages
 const getUniqueId = () => {
-  return Math.random()
-    .toString(36)
-    .substr(2, 16);
+  return Math.random().toString(36).substr(2, 16);
 };
 
 const getTime = () => {
@@ -35,7 +33,7 @@ const resetMessageInput = () => {
 
 const resetButtonInput = () => {
   navUserSelect.selectedIndex = 0;
-}
+};
 
 // pass in an event and the id of the button as a string
 const disableBtn = (e, buttonId) => {
@@ -47,23 +45,27 @@ const disableBtn = (e, buttonId) => {
 };
 
 // pass id of button as a string
-const enableBtn = (buttonId)=> {
+const enableBtn = buttonId => {
   document.getElementById(buttonId).removeAttribute("disabled");
   document.getElementById(buttonId).classList.remove("disabled");
 };
 
 const disableDropdown = () => {
-  navUserSelect.setAttribute("disabled", "disabled")
-}
+  navUserSelect.setAttribute("disabled", "disabled");
+};
 
 const enableDropdown = () => {
   navUserSelect.removeAttribute("disabled");
-}
+};
 
-const getMessageObject = (selectedMessage) => {
-    const messagesArray = getMessages();
-    const messageId = messagesArray.findIndex((messages) => messages.id === selectedMessage);
-    return messageId;
-}
+const getMessageObject = selectedMessage => {
+  const messagesArray = getMessages();
+  const messageId = messagesArray.findIndex(messages => messages.id === selectedMessage);
+  return messageId;
+};
 
-export { printToDom, getTime, getUniqueId, inputValidation, resetMessageInput, enableBtn, disableBtn, getMessageObject, resetButtonInput, disableDropdown, enableDropdown };
+const setScrolDown = divId => {
+  document.getElementById(divId).scrollIntoView();
+};
+
+export { printToDom, getTime, getUniqueId, inputValidation, resetMessageInput, enableBtn, disableBtn, setScrolDown, getMessageObject, resetButtonInput, disableDropdown, enableDropdown };
