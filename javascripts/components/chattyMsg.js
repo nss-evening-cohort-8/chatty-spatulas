@@ -1,8 +1,11 @@
-import { printToDom, getUniqueId, getTime, inputValidation, resetMessageInput, setScrolDown } from "../helpers/util.js";
+import { editBtnEvent } from "../events/userMsgEvents.js";
+import { printToDom, getUniqueId, getTime, inputValidation, resetMessageInput, getMessageObject, disableDropdown, resetButtonInput, enableDropdown, setScrolDown } from '../helpers/util.js';
 
 let messagesArray = [];
 
-const setMessages = newArray => {
+let editMode = { isInEdit: false, id: 0 };
+
+const setMessages = (newArray) => {
   messagesArray = newArray;
 };
 
@@ -27,7 +30,7 @@ const messagesBuilder = messagesArray => {
     domString += `<p>${message.msg}</p>`;
     domString += `</div>`;
     domString += `<div class="col-md-1 justify-content-end row align-items-center">`;
-    domString += `<button type="button" class="msg-btn btn btn-success btn-sm mx-1" value="${message.id}">`;
+    domString += `<button type="button" class="edit-btn msg-btn btn btn-success btn-sm mx-1" value="${message.id}">`;
     domString += `<i class="far fa-edit"></i>`;
     domString += `</button>`;
     domString += `<button type="button" class="msg-btn btn btn-danger btn-sm mx-1" value="${message.id}">`;
@@ -37,6 +40,7 @@ const messagesBuilder = messagesArray => {
     domString += `<hr>`;
   });
   printToDom(domString, "message-output");
+  editBtnEvent();
 };
 
 const clearMsg = () => {
@@ -49,7 +53,14 @@ const clearMsg = () => {
 const enterKeyMsgEvent = (user, message) => {
   let userMsgError = message === "" ? true : false;
   let selectedUserError = user === "Select User" ? true : false;
-  if (userMsgError === true || selectedUserError === true) {
+  if (editMode.isInEdit === true) {
+    getUpdatedMsg(editMode.id, message);
+    editMode.isInEdit = false;
+    resetMessageInput();
+    resetButtonInput();
+    enableDropdown();
+    return;
+  } else if (userMsgError === true || selectedUserError === true) {
     inputValidation(userMsgError, selectedUserError);
     return;
   }
@@ -63,6 +74,25 @@ const enterKeyMsgEvent = (user, message) => {
   messagesBuilder(currentMsgArray);
   setScrolDown(newMsgObject.id);
   resetMessageInput();
+  resetButtonInput();
 };
 
-export { setMessages, getMessages, messagesBuilder, enterKeyMsgEvent, clearMsg };
+const getEdittedMsg = (e) => {
+  const msgInput = document.getElementById("message-input");
+  const userSelect = document.getElementById("user-selected")
+  const btnId = e.target.closest(".edit-btn").value;
+  const msgIndex = getMessageObject(btnId);
+  editMode.isInEdit = true;
+  editMode.id = msgIndex;
+  msgInput.focus();
+  msgInput.value = messagesArray[msgIndex].msg;
+  userSelect.value = messagesArray[msgIndex].username;
+  disableDropdown();
+};
+
+const getUpdatedMsg = (msgIndex, edittedMsg) => {
+  messagesArray[msgIndex].msg = edittedMsg;
+  messagesBuilder(messagesArray);
+}
+
+export { setMessages, getMessages, messagesBuilder, enterKeyMsgEvent, clearMsg, getEdittedMsg, editMode };

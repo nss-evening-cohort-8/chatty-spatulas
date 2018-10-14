@@ -1,8 +1,4 @@
-import {
-  setMessages,
-  messagesBuilder,
-  getMessages
-} from '../components/chattyMsg.js';
+import { setMessages, messagesBuilder, getMessages } from '../components/chattyMsg.js';
 
 function getData() {
   const data = JSON.parse(this.responseText);
@@ -11,14 +7,14 @@ function getData() {
 }
 
 function ifDataFails() {
-  console.log('Xhr failed');
+  console.log("Xhr failed");
 }
 
 const getMessageData = () => {
   let myRequest = new XMLHttpRequest();
-  myRequest.addEventListener('load', getData);
-  myRequest.addEventListener('error', ifDataFails);
-  myRequest.open('GET', './db/startupMsg.json');
+  myRequest.addEventListener("load", getData);
+  myRequest.addEventListener("error", ifDataFails);
+  myRequest.open("GET", "./db/startupMsg.json");
   myRequest.send();
 };
 
