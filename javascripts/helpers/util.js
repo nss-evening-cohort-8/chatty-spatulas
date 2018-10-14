@@ -41,9 +41,13 @@ const disableBtn = (e, buttonId) => {
 };
 
 // pass id of button as a string
-const enableBtn = (buttonId)=> {
+const enableBtn = buttonId => {
   document.getElementById(buttonId).removeAttribute("disabled");
   document.getElementById(buttonId).classList.remove("disabled");
 };
 
-export { printToDom, getTime, getUniqueId, inputValidation, resetMessageInput, enableBtn, disableBtn };
+const setScrolDown = divId => {
+  document.getElementById(divId).scrollIntoView();
+};
+
+export { printToDom, getTime, getUniqueId, inputValidation, resetMessageInput, enableBtn, disableBtn, setScrolDown };
