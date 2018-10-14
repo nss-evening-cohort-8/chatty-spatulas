@@ -15,27 +15,25 @@ body {
   font-size: 0.9rem;
 }
 
-#textSize {
-  padding: 15px;
-}
 /* 
 #backgroundColor {
   display: flex;
   padding: 15px;
 } */
 
-#themeColor {
+#large-text-checkbox {
   display: flex;
   padding: 15px;
   justify-content: space-between;
 }
-/* .modal-content {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-} */
 
-#changeColor {
+#change-theme-color {
+  display: flex;
+  padding: 15px;
+  justify-content: space-between;
+}
+
+#change-text-color {
   display: flex;
   padding: 15px;
   justify-content: space-between;
