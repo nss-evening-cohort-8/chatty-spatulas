@@ -15,12 +15,6 @@ body {
   font-size: 0.9rem;
 }
 
-/* 
-#backgroundColor {
-  display: flex;
-  padding: 15px;
-} */
-
 #large-text-checkbox {
   display: flex;
   padding: 15px;
@@ -46,4 +40,8 @@ body {
 
 #backgrnd-color {
   align-content: center;
+}
+
+.modal-dialog {
+  box-shadow: 5px 5px 5px 5px rgba(19, 17, 17, 0.671);
 }
