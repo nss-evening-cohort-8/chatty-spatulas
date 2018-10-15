@@ -1,4 +1,4 @@
-import { editBtnEvent } from "../events/userMsgEvents.js";
+import { editBtnEvent, delBtnEvent } from "../events/userMsgEvents.js";
 import {
   printToDom,
   getUniqueId,
@@ -11,7 +11,6 @@ import {
   enableDropdown,
   setScrolDown
 } from "../helpers/util.js";
-import { loadMultiUser } from "../components/liveChat.js";
 
 let messagesArray = [];
 
@@ -45,7 +44,7 @@ const messagesBuilder = messagesArray => {
     domString += `<button type="button" class="edit-btn msg-btn btn btn-success btn-sm mx-1" value="${message.id}">`;
     domString += `<i class="far fa-edit"></i>`;
     domString += `</button>`;
-    domString += `<button type="button" class="msg-btn btn btn-danger btn-sm mx-1" value="${message.id}">`;
+    domString += `<button type="button" class="del-btn msg-btn btn btn-danger btn-sm mx-1" value="${message.id}">`;
     domString += `<i class="far fa-trash-alt" ></i ></button >`;
     domString += `</div>`;
     domString += `</div>`;
@@ -53,6 +52,9 @@ const messagesBuilder = messagesArray => {
   });
   printToDom(domString, "message-output");
   editBtnEvent();
+  delBtnEvent();
+  emojify.setConfig({ img_dir: "../../jemoji/emojis" });
+  emojify.run(document.getElementById("message-output"));
 };
 
 const clearMsg = () => {
@@ -111,4 +113,13 @@ const getUpdatedMsg = (msgIndex, edittedMsg) => {
   messagesBuilder(messagesArray);
 };
 
-export { setMessages, getMessages, messagesBuilder, enterKeyMsgEvent, clearMsg, getEdittedMsg, editMode };
+const delMsg = e => {
+  const btnId = e.target.closest(".del-btn").value;
+  const msgIndex = getMessageObject(btnId);
+  messagesArray.splice(msgIndex, 1);
+  messagesBuilder(messagesArray);
+  emojify.setConfig({ img_dir: "../../jemoji/emojis" });
+  emojify.run(document.getElementById("message-output"));
+};
+
+export { setMessages, getMessages, messagesBuilder, enterKeyMsgEvent, clearMsg, getEdittedMsg, editMode, delMsg };

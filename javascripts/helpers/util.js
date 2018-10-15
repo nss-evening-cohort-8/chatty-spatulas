@@ -10,7 +10,9 @@ const navUserSelect = document.getElementById("user-selected");
 
 // Generate unique ID for our messages
 const getUniqueId = () => {
-  return Math.random().toString(36).substr(2, 16);
+  return Math.random()
+    .toString(36)
+    .substr(2, 16);
 };
 
 const getTime = () => {
@@ -52,12 +54,12 @@ const enableBtn = buttonId => {
 
 const disableDropdown = () => {
   navUserSelect.setAttribute("disabled", "disabled");
-  navUserSelect.classList.add("btn-outline-success")
+  navUserSelect.classList.add("btn-outline-success");
 };
 
 const enableDropdown = () => {
   navUserSelect.removeAttribute("disabled");
-  navUserSelect.classList.remove("btn-outline-success")
+  navUserSelect.classList.remove("btn-outline-success");
 };
 
 const getMessageObject = selectedMessage => {
@@ -70,4 +72,17 @@ const setScrolDown = divId => {
   document.getElementById(divId).scrollIntoView();
 };
 
-export { printToDom, getTime, getUniqueId, inputValidation, resetMessageInput, enableBtn, disableBtn, setScrolDown, getMessageObject, resetButtonInput, disableDropdown, enableDropdown };
+export {
+  printToDom,
+  getTime,
+  getUniqueId,
+  inputValidation,
+  resetMessageInput,
+  enableBtn,
+  disableBtn,
+  setScrolDown,
+  getMessageObject,
+  resetButtonInput,
+  disableDropdown,
+  enableDropdown
+};

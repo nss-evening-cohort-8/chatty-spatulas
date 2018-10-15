@@ -1,21 +1,53 @@
 body {
-	background-color: #c8d6e5;
-	font-family: "Roboto", sans-serif;
+  background-color: #c8d6e5;
+  font-family: "Roboto", sans-serif;
 }
 
 #none {
-	display: none;
+  display: none;
 }
 
 .msg-btn {
-	width: 2rem;
+  width: 2rem;
 }
 
 .message-text {
-	font-size: 0.9rem;
+  font-size: 0.9rem;
 }
 
 .message-board {
-	max-height: 60vh;
-	overflow-y: auto;
+  min-height: calc(100vh - 250px);
+  max-height: 60vh;
+  overflow-y: auto;
+}
+
+#large-text-checkbox {
+  display: flex;
+  padding: 15px;
+  justify-content: space-between;
+}
+
+#change-theme-color {
+  display: flex;
+  padding: 15px;
+  justify-content: space-between;
+}
+
+#change-text-color {
+  display: flex;
+  padding: 15px;
+  justify-content: space-between;
+}
+
+#backgrnd-color {
+  align-content: center;
+}
+
+.modal-dialog {
+  box-shadow: 10px 10px 5px 5px rgba(19, 17, 17, 0.671);
+}
+
+#user-selected {
+	min-width: 150px;
+	height: 38px;
 }

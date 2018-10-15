@@ -9,8 +9,12 @@ const navbarEnterEvents = () => {
     if (e.key === "Enter" && clearBtn.classList.contains("disabled")) {
       enterKeyMsgEvent(navUserSelect.value, navTextInput.value);
       enableBtn("clear-btn");
+      emojify.setConfig({img_dir: '../../jemoji/emojis'});
+      emojify.run(document.getElementById("message-output"));
     } else if (e.key === "Enter") {
       enterKeyMsgEvent(navUserSelect.value, navTextInput.value);
+      emojify.setConfig({img_dir: '../../jemoji/emojis'});
+      emojify.run(document.getElementById("message-output"));
     } else if (navTextInput.classList.contains("is-invalid")) {
       navTextInput.classList.remove("is-invalid");
       navTextInput.setAttribute("placeholder", "Enter your message");
@@ -24,8 +28,8 @@ const navBarUserSelectEvents = () => {
   navUserSelect.addEventListener("keypress", e => {
     if (e.key === "Enter") {
       enterKeyMsgEvent(navUserSelect.value, navTextInput.value);
-    } else if (navBarUserSelectEvents.classList.contains("btn-danger")) {
-      navBarUserSelectEvents.classList.replace("btn-danger", "btn-success");
+    } else if (navUserSelect.classList.contains("btn-danger")) {
+      navUserSelect.classList.replace("btn-danger", "btn-success");
     }
   });
   navUserSelect.addEventListener("change", e => {
@@ -43,4 +47,31 @@ const clearMsgEvent = () => {
   });
 };
 
-export { navbarEnterEvents, clearMsgEvent, navBarUserSelectEvents };
+const textSize = () => {
+  const largeText = document.getElementById("large-text");
+  largeText.addEventListener("change", e => {
+    if (largeText.checked) {
+      document.getElementById("message-output").style.fontSize = "2rem";
+    } else {
+      document.getElementById("message-output").style.fontSize = "1rem";
+    }
+  });
+};
+
+const themeColor = () => {
+  const background = document.getElementById("backgrnd-color");
+  background.addEventListener("change", e => {
+    const newColor = document.getElementById("backgrnd-color").value;
+    document.body.style.backgroundColor = newColor;
+  });
+};
+
+const textColor = () => {
+  const msgColor = document.getElementById("text-color");
+  msgColor.addEventListener("change", e => {
+    const newColor = document.getElementById("text-color").value;
+    document.body.style.color = newColor;
+  });
+};
+
+export { navbarEnterEvents, clearMsgEvent, navBarUserSelectEvents, textSize, themeColor, textColor };
