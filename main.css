@@ -13,10 +13,44 @@ body {
 
 .message-text {
   font-size: 0.9rem;
+<<<<<<< HEAD
 }
 
 .message-board {
   min-height: calc(100vh - 250px);
   max-height: 60vh;
   overflow-y: auto;
+=======
+}
+
+#large-text-checkbox {
+  display: flex;
+  padding: 15px;
+  justify-content: space-between;
+}
+
+#change-theme-color {
+  display: flex;
+  padding: 15px;
+  justify-content: space-between;
+}
+
+#change-text-color {
+  display: flex;
+  padding: 15px;
+  justify-content: space-between;
+}
+
+.message-board {
+  max-height: 60vh;
+  overflow-y: auto;
+}
+
+#backgrnd-color {
+  align-content: center;
+}
+
+.modal-dialog {
+  box-shadow: 10px 10px 5px 5px rgba(19, 17, 17, 0.671);
+>>>>>>> master
 }
