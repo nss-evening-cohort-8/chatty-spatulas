@@ -15,18 +15,15 @@
 
 <body id="full-page">
     <nav class="navbar navbar-expand-sm bg-light w-100 shadow sticky-top">
-        <img class="m-3 nav-item mx-auto" src="./img/logo.png" alt="Logo">
-        <div class="input-group mx-5 my-auto nav-item">
-            <input type="text" placeholder="Enter your message" class="form-control" aria-label="Text input with dropdown button"
-                id="message-input">
-            <div class="input-group-append nav-item" id="users-select">
-                <select class="selectpicker btn-success" id="user-selected">
-                    <!-- Populate users here from an array -->
-                </select>
-            </div>
+        <img class="mx-5 nav-item mx-auto" src="./img/logo.png" alt="Logo">
+        <input type="text" placeholder="Enter your message then press Enter" class=" mx-5 nav-item form-control" id="message-input">
+        <select class="btn-success form-control col-1" id="user-selected">
+            <!-- Populate users here from an array -->
+        </select>
         </div>
-        <button type="button" class="theme-buton btn btn-outline-info mx-auto m-3 nav-item" id="themeButton"
-            data-toggle="modal" data-target="#theme-modal">Select Theme <i class="fas fa-eye-dropper"></i></button>
+        </div>
+        <button type="button" class="theme-buton btn btn-outline-info mx-5 nav-item" id="themeButton" data-toggle="modal"
+            data-target="#theme-modal">Select Theme <i class="fas fa-eye-dropper"></i></button>
     </nav>
 
 
@@ -106,4 +103,3 @@
 </body>
 
 </html>
-

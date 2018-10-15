@@ -54,10 +54,12 @@ const enableBtn = buttonId => {
 
 const disableDropdown = () => {
   navUserSelect.setAttribute("disabled", "disabled");
+  navUserSelect.classList.add("btn-outline-success");
 };
 
 const enableDropdown = () => {
   navUserSelect.removeAttribute("disabled");
+  navUserSelect.classList.remove("btn-outline-success");
 };
 
 const getMessageObject = selectedMessage => {
