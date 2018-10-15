@@ -1,4 +1,5 @@
 import { getEdittedMsg, delMsg } from "../components/chattyMsg.js";
+import {enableBtn} from "../helpers/util.js";
 
 const editBtnEvent = () => {
   const editButtons = document.getElementsByClassName("edit-btn");
@@ -14,7 +15,13 @@ const delBtnEvent = () => {
   for (let i = 0; i < delButtons.length; i++) {
     delButtons[i].addEventListener("click", e => {
       delMsg(e);
-    });
+        if (document.getElementById("message-output").innerHTML === "") {
+          document.getElementById("clear-btn").setAttribute("disabled", "disabled");
+          document.getElementById("clear-btn").classList.add("disabled");
+        } else {
+          enableBtn("clear-btn");
+        }
+      })
   }
 };
 
