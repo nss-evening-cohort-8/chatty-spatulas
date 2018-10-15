@@ -1,11 +1,23 @@
 import { editBtnEvent } from "../events/userMsgEvents.js";
-import { printToDom, getUniqueId, getTime, inputValidation, resetMessageInput, getMessageObject, disableDropdown, resetButtonInput, enableDropdown, setScrolDown } from '../helpers/util.js';
+import {
+  printToDom,
+  getUniqueId,
+  getTime,
+  inputValidation,
+  resetMessageInput,
+  getMessageObject,
+  disableDropdown,
+  resetButtonInput,
+  enableDropdown,
+  setScrolDown
+} from "../helpers/util.js";
+import { loadMultiUser } from "../components/liveChat.js";
 
 let messagesArray = [];
 
 let editMode = { isInEdit: false, id: 0 };
 
-const setMessages = (newArray) => {
+const setMessages = newArray => {
   messagesArray = newArray;
 };
 
@@ -51,6 +63,10 @@ const clearMsg = () => {
 };
 
 const enterKeyMsgEvent = (user, message) => {
+  if (message === "!!") {
+    loadMultiUser();
+    return;
+  }
   let userMsgError = message === "" ? true : false;
   let selectedUserError = user === "Select User" ? true : false;
   if (editMode.isInEdit === true) {
@@ -77,9 +93,9 @@ const enterKeyMsgEvent = (user, message) => {
   resetButtonInput();
 };
 
-const getEdittedMsg = (e) => {
+const getEdittedMsg = e => {
   const msgInput = document.getElementById("message-input");
-  const userSelect = document.getElementById("user-selected")
+  const userSelect = document.getElementById("user-selected");
   const btnId = e.target.closest(".edit-btn").value;
   const msgIndex = getMessageObject(btnId);
   editMode.isInEdit = true;
@@ -93,6 +109,6 @@ const getEdittedMsg = (e) => {
 const getUpdatedMsg = (msgIndex, edittedMsg) => {
   messagesArray[msgIndex].msg = edittedMsg;
   messagesBuilder(messagesArray);
-}
+};
 
 export { setMessages, getMessages, messagesBuilder, enterKeyMsgEvent, clearMsg, getEdittedMsg, editMode };
