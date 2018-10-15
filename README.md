@@ -16,9 +16,22 @@ A user friendly chat application that incorporates the following features:
 * ES6 Modules
 
 ### Screenshots
-![dog](./screenshots/dog.png)
+Homescreen
+![homescreen](./screenshots/homescreen.png)
+Emoji
+![emoji](./screenshots/emoji.png)
+User Error
+![usererror](./screenshots/usererror.png)
+Message Error
+![messageerror](./screenshots/messageerror.png)
+Theme Modal
+![theme](./screenshots/theme.png)
+Edit Messages
+![edit](./screenshots/edit.png)
+Clear Messages
+![clear](./screenshots/clear.png)
 
-## How to run this project
+### How to run this project
 * Use npm to install http-server in your terminal:
 ```sh
 npm install -g http-server
@@ -34,8 +47,8 @@ localhost:9999
 * Use npm to install moment.js
 * Use npm to install emojify.js
 
-## Contributors
+### Contributors
 [Maggie Leavell](https://github.com/mjleavell)
-[Marco Crank]
-[Lance Hamilton]
-[Mohammad Khezri]
+[Marco Crank](https://github.com/MCrank)
+[Lance Hamilton](hhttps://github.com/lancehamilton24)
+[Mohammad Khezri](https://github.com/m-khezri)
