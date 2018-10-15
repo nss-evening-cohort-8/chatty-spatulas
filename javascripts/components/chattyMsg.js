@@ -53,6 +53,8 @@ const messagesBuilder = messagesArray => {
   printToDom(domString, "message-output");
   editBtnEvent();
   delBtnEvent();
+  emojify.setConfig({img_dir: '../../jemoji/emojis'});
+  emojify.run(document.getElementById("message-output"));
 };
 
 const clearMsg = () => {
