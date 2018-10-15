@@ -10,4 +10,12 @@ const initializeApp = () => {
 	navBarUserSelectEvents();
 };
 
+// $(document).ready(function () {
+// 	$("#message-input").emojioneArea({
+// 		pickerPosition: "left",
+// 		tonesStyle: "bullet"
+// 	});
+// });
+new EmojiPicker();
+
 initializeApp();
