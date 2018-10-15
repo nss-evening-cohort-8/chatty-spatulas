@@ -1,4 +1,4 @@
-import { printToDom, getUniqueId, getTime } from "../helpers/util.js";
+import { printToDom, getUniqueId, getTime, setScrolDown } from "../helpers/util.js";
 import { messagesBuilder, getMessages } from "../components/chattyMsg.js";
 
 let chattyMembers = [];
@@ -55,6 +55,7 @@ drone.on("open", error => {
       newMsgObject.timeStamp = getTime();
       currentMsgArray.push(newMsgObject);
       messagesBuilder(currentMsgArray);
+      setScrolDown(newMsgObject.id);
       //   console.log(member);
     } else {
       //   Message is from server
@@ -86,6 +87,7 @@ const setUi = status => {
     DOM.navBar.setAttribute("hidden", true);
     DOM.msgContainer.setAttribute("hidden", true);
     DOM.newStatus.removeAttribute("hidden");
+    DOM.newInput.value = "";
   } else if (status === "project") {
     DOM.newInputDiv.setAttribute("hidden", true);
     DOM.navBar.removeAttribute("hidden");
