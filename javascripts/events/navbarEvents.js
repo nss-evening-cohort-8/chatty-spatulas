@@ -28,8 +28,8 @@ const navBarUserSelectEvents = () => {
   navUserSelect.addEventListener("keypress", e => {
     if (e.key === "Enter") {
       enterKeyMsgEvent(navUserSelect.value, navTextInput.value);
-    } else if (navBarUserSelectEvents.classList.contains("btn-danger")) {
-      navBarUserSelectEvents.classList.replace("btn-danger", "btn-success");
+    } else if (navUserSelect.classList.contains("btn-danger")) {
+      navUserSelect.classList.replace("btn-danger", "btn-success");
     }
   });
   navUserSelect.addEventListener("change", e => {
