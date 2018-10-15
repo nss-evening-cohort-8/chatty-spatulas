@@ -1,6 +1,6 @@
-import { printToDom } from "../helpers/util.js";
+import { printToDom } from '../helpers/util.js';
 
-const users = ["Mohammad", "Lance", "Marco", "Maggie"];
+const users = [ 'Mohammad', 'Lance', 'Marco', 'Maggie' ];
 
 const userPopulate = () => {
   let domString = "";
