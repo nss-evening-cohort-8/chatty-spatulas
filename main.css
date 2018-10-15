@@ -40,6 +40,10 @@ body {
 }
 
 .message-board {
-	max-height: 60vh;
-	overflow-y: auto;
+  max-height: 60vh;
+  overflow-y: auto;
+}
+
+#backgrnd-color {
+  align-content: center;
 }

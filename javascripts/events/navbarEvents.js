@@ -49,8 +49,11 @@ const textSize = () => {
     if (largeText.checked) {
       document.getElementById("message-output").style.fontSize = "2rem";
     } else {
-      document.getElementById("message-output").style.fonSize = "1rem";
+      document.getElementById("message-output").style.fontSize = "1rem";
     }
+    var e = document.getElementById(id);
+    if (e.style.display == "block") e.style.display = "none";
+    else e.style.display = "block";
   });
 };
 
