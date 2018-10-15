@@ -11,6 +11,7 @@ import {
   enableDropdown,
   setScrolDown
 } from "../helpers/util.js";
+import { loadMultiUser } from "../components/liveChat.js";
 
 let messagesArray = [];
 

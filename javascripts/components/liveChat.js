@@ -1,4 +1,4 @@
-import { printToDom, getUniqueId, getTime, setScrolDown } from "../helpers/util.js";
+import { getUniqueId, getTime, setScrolDown } from "../helpers/util.js";
 import { messagesBuilder, getMessages } from "../components/chattyMsg.js";
 
 let chattyMembers = [];
