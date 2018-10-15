@@ -47,4 +47,31 @@ const clearMsgEvent = () => {
   });
 };
 
-export { navbarEnterEvents, clearMsgEvent, navBarUserSelectEvents };
+const textSize = () => {
+  const largeText = document.getElementById("large-text");
+  largeText.addEventListener("change", e => {
+    if (largeText.checked) {
+      document.getElementById("message-output").style.fontSize = "2rem";
+    } else {
+      document.getElementById("message-output").style.fontSize = "1rem";
+    }
+  });
+};
+
+const themeColor = () => {
+  const background = document.getElementById("backgrnd-color");
+  background.addEventListener("change", e => {
+    const newColor = document.getElementById("backgrnd-color").value;
+    document.body.style.backgroundColor = newColor;
+  });
+};
+
+const textColor = () => {
+  const msgColor = document.getElementById("text-color");
+  msgColor.addEventListener("change", e => {
+    const newColor = document.getElementById("text-color").value;
+    document.body.style.color = newColor;
+  });
+};
+
+export { navbarEnterEvents, clearMsgEvent, navBarUserSelectEvents, textSize, themeColor, textColor };
