@@ -9,8 +9,12 @@ const navbarEnterEvents = () => {
     if (e.key === "Enter" && clearBtn.classList.contains("disabled")) {
       enterKeyMsgEvent(navUserSelect.value, navTextInput.value);
       enableBtn("clear-btn");
+      emojify.setConfig({img_dir: '../../jemoji/emojis'});
+      emojify.run(document.getElementById("message-output"));
     } else if (e.key === "Enter") {
       enterKeyMsgEvent(navUserSelect.value, navTextInput.value);
+      emojify.setConfig({img_dir: '../../jemoji/emojis'});
+      emojify.run(document.getElementById("message-output"));
     } else if (navTextInput.classList.contains("is-invalid")) {
       navTextInput.classList.remove("is-invalid");
       navTextInput.setAttribute("placeholder", "Enter your message");
