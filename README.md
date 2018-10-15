@@ -1,20 +1,41 @@
-# Chatty Group Project
-Your group will be creating a chat application. The features your team will build have already been added to your backlog in the "projects" section of this repo. This application should demonstrate your skills in:
-- Modular code
-- Dependency chaining
-- Asynchronous code
-- DOM interaction
-- Debugging
+# Chatty Chatty Bang Bang Group Project
 
-## Requirements
-* Use Bootstrap
-* Balanced GitHub contributions
-* Completed README
-* No Grunt errors
-* Use ES6 Modules
+### Description
+A user friendly chat application that incorporates the following features:
+* Multiple Users
+* Users have the ability to see the timestamp on their messages.
+* Users have the ability to choose the background color, text color, and font size.
+* Users have the ability to edit and delete messages.
+* Users have the ability to insert emojis.
 
-## Interacting With Your Product Owner
-Your group has been designated a product owner (one of the instructors). This product owner has the overall vision of the application and must approve your tickets before you start working on them. When you complete the MVP tickets in your backlog, you should reach out to your product owner to recieve tickets for additional features. Note that this project is often used as a portfolio project for students, so you and your team should push yourselves to get to the "game changer" bonus features, but only after you have a strong MVP.
+### Technologies
+* Bootstrap 4
+* HTML 5
+* CSS
+* Javascript
+* ES6 Modules
 
+### Screenshots
+![dog](./screenshots/dog.png)
 
-Check out the [simple wireframe](https://app.moqups.com/chortlehoort/uGBbLbK46Y/view/page/a3bd0c733) for this application on Moqups.com. You can make your final interface as fancy as you like, but keep the general layout similar to the wireframe.
+## How to run this project
+* Use npm to install http-server in your terminal:
+```sh
+npm install -g http-server
+```
+* Run the server in your terminal
+```sh
+hs -p 9999
+```
+* Open chrome and navigate to:
+```
+localhost:9999
+```
+* Use npm to install moment.js
+* Use npm to install emojify.js
+
+## Contributors
+[Maggie Leavell](https://github.com/mjleavell)
+[Marco Crank]
+[Lance Hamilton]
+[Mohammad Khezri]
