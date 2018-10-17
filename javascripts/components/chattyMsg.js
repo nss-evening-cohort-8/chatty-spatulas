@@ -9,10 +9,9 @@ import {
   disableDropdown,
   resetButtonInput,
   enableDropdown,
-  setScrolDown,
-  disableBtn,
-  enableBtn
+  setScrolDown
 } from "../helpers/util.js";
+import { loadMultiUser } from "../components/liveChat.js";
 
 let messagesArray = [];
 
@@ -55,7 +54,7 @@ const messagesBuilder = messagesArray => {
   printToDom(domString, "message-output");
   editBtnEvent();
   delBtnEvent();
-  emojify.setConfig({img_dir: '../../jemoji/emojis'});
+  emojify.setConfig({ img_dir: "../../jemoji/emojis" });
   emojify.run(document.getElementById("message-output"));
 };
 
@@ -67,6 +66,10 @@ const clearMsg = () => {
 };
 
 const enterKeyMsgEvent = (user, message) => {
+  if (message === "!!") {
+    loadMultiUser();
+    return;
+  }
   let userMsgError = message === "" ? true : false;
   let selectedUserError = user === "Select User" ? true : false;
   if (editMode.isInEdit === true) {
@@ -116,7 +119,7 @@ const delMsg = e => {
   const msgIndex = getMessageObject(btnId);
   messagesArray.splice(msgIndex, 1);
   messagesBuilder(messagesArray);
-  emojify.setConfig({img_dir: '../../jemoji/emojis'});
+  emojify.setConfig({ img_dir: "../../jemoji/emojis" });
   emojify.run(document.getElementById("message-output"));
 };
 
