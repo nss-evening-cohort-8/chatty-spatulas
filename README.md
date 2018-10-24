@@ -8,6 +8,8 @@ A user friendly chat application that incorporates the following features:
 * Users have the ability to edit and delete messages.
 * Users have the ability to insert emojis.
 
+For the live chat, enter !! into text input. Users will enter the live chat and have the ability to chat with their friends.
+
 ### Technologies
 * Bootstrap 4
 * HTML 5
@@ -30,6 +32,8 @@ Edit Messages
 ![edit](./screenshots/edit.png)
 Clear Messages
 ![clear](./screenshots/clear.png)
+Live Chat
+![livechat](./screenshots/livechat.png)
 
 ### How to run this project
 * Use npm to install http-server in your terminal:
@@ -50,5 +54,5 @@ localhost:9999
 ### Contributors
 [Maggie Leavell](https://github.com/mjleavell)
 [Marco Crank](https://github.com/MCrank)
-[Lance Hamilton](hhttps://github.com/lancehamilton24)
+[Lance Hamilton](https://github.com/lancehamilton24)
 [Mohammad Khezri](https://github.com/m-khezri)
